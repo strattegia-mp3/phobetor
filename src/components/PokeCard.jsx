@@ -14,14 +14,19 @@ const PokeCard = ({ name, image, types }) => {
   return (
     <Card style={{ width: "18rem", margin: "1.5rem" }}>
       <Card.Img variant="top" src={image} />
-      <Card.Body>
+      <hr style={{ marginBottom: ".2rem" }} />
+      <Card.Body
+        style={{
+          display: "flex",
+          textAlign: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          textTransform: "capitalize",
+        }}
+      >
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle>{typeHandler()}</Card.Subtitle>
-        {/* <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button> */}
+        {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>
     </Card>
   );

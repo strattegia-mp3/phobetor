@@ -38,8 +38,8 @@ function App() {
   return (
     <>
       <Header pokeFilter={pokeFilter} />
-      <Container fluid>
-        <Row>
+      <Container>
+        <Row style={{ alignItens: "center", justifyContent: "center" }}>
           {pokemons.map((pokemon, key) => (
             <PokeCard
               key={key}
